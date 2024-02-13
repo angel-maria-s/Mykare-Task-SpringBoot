@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<style>
+  /* CSS for heading */
+  h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* CSS for box container */
+  .box-container {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0 auto 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for box container */
+  .box-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* CSS for links */
+  .box-container a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .box-container:hover a {
+    color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<h1>Mykare Task</h1>
+<div class="box-container">
+  <a href="/map-register">Click here for User Registration</a>
+</div>
+<div class="box-container">
+  <a href="/map-login">Click here for User login</a>
+</div>
+<div class="box-container">
+  <a href="/map-viewusers">Click here for get all Users</a>
+</div>
+<div class="box-container">
+  <a href="/map-delete">Click here for delete a User</a>
+</div>
+</body>
+</html>
