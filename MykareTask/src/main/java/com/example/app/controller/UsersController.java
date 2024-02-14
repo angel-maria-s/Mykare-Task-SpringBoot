@@ -22,7 +22,7 @@ public class UsersController
 	@Autowired
 	UsersService userv;
 	
-        //code for User Registration (Email should be unique and don't allow duplicate user to register )
+        //code for User Registration (Email should be unique and don't allow duplicate user to register)
 	@PostMapping("/register")
 	public String addUser(@ModelAttribute Users user) {
 	    boolean userstatus = userv.emailExists(user.getEmail());
