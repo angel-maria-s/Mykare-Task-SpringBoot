@@ -22,6 +22,7 @@ public class UsersController
 	@Autowired
 	UsersService userv;
 	
+        //code for User Registration (Email should be unique and don't allow duplicate user to register )
 	@PostMapping("/register")
 	public String addUser(@ModelAttribute Users user) {
 	    boolean userstatus = userv.emailExists(user.getEmail());
@@ -33,6 +34,7 @@ public class UsersController
 	    }
 	}
 
+	//code for validate the user by passing Email and Password.
 	@PostMapping("/login")
 	public String validateUser(@RequestParam String email,@RequestParam String password ) {
 		if(userv.validateUser(email, password) == true)
@@ -43,7 +45,8 @@ public class UsersController
 			return "loginfail";
 		}
 	}
-	
+
+	//code to get all the users registered
 	@GetMapping("/map-viewusers")
 	public String viewUsers(Model model)
 	{
@@ -57,6 +60,7 @@ public class UsersController
 	    return "deleteuser";
 	}
 
+	//code to delete a user based on the email id passed
 	@RequestMapping(value = "/delete/{email}", method = {RequestMethod.DELETE, RequestMethod.POST} )
 	public String deleteUser(String email) {
 	    String msg = userv.deleteUserByEmail(email);
